@@ -11,40 +11,21 @@ with open('./input.txt') as f:
         #testlines = testlines - 1
         #if testlines == 0:
         #   break
-
-        #print(line)
         
         
-        # Process the line (e.g., print or update counter)
-        
-        l_or_r = line[0]
-        number = int(line[1:])
+        l_or_r = line[0]            #R or L
+        number = int(line[1:])      #Rest of the input (number)
         
         #print(l_or_r)
         #print(number)
 
         if l_or_r == "R":
-            dial = dial + number
-            while dial >= 100:
-                dial = dial - 100
-                if dial == 0:
-                    continue
-                else:
-                    counter = counter + 1
-
+            print("R")
+            
         else:
-            dial = dial - number
-            while dial < 0:
-                dial = dial + 100
-                if dial == 0:
-                    continue
-                else:
-                    counter = counter + 1
+            print("L")
 
-        #print(dial)
-
-        if dial == 0:
-            counter = counter + 1
+        
 
 print("counter: ", counter)
 
